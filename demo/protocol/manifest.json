@@ -3,7 +3,7 @@
   "version": "0.1",
   "name": "protocol@libdweb",
   "description": "Extension containing libdweb protocol API",
-  "permissions": [],
+  "permissions": [ "<all_urls>" ],
 
   "experiment_apis": {
     "protocol": {
@@ -22,8 +22,9 @@
     }
   },
   "background": {
-    "scripts": ["protocol.js"]
+    "page": "protocol.html"
   },
+  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
   "icons": {
     "48": "../discovery/logo-flyweb-grey.svg",
     "96": "../discovery/logo-flyweb-grey.svg"
